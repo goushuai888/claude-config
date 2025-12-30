@@ -1,0 +1,5 @@
+# 本地敏感配置（不要提交）
+settings.local.json
+
+# 系统文件
+.DS_Store

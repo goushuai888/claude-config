@@ -1,0 +1,59 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/session-start.js\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/prompt-submit.js\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/pre-tool-use.js\""
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Blow.aiff 2>/dev/null &"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/stop.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
