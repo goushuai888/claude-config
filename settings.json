@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/prompt-submit.js\""
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/user-prompt-submit.js\""
           }
         ]
       }
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Blow.aiff 2>/dev/null &"
+            "command": "d=$(pwd); while [ ! -d \"$d/.claude\" ] && [ \"$d\" != \"/\" ]; do d=$(dirname \"$d\"); done; node \"$d/.claude/hooks/permission-request.js\""
           }
         ]
       }
